@@ -1,17 +1,19 @@
-import { Inter } from "next/font/google";
+import { Footer, NavBar } from "@/components";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "CarHub",
-  description: "Car Showcasing Website",
+  title: "Car Hub",
+  description: "Discover world's best car showcase application",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className='relative'>
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
